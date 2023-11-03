@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-busqueda',
@@ -10,6 +10,8 @@ export class BusquedaComponent {
   @Output()
   onEnter: EventEmitter<string> = new EventEmitter();
   @ViewChild('txtBuscar') txtBuscar!:ElementRef<HTMLInputElement>;
+  @Input()
+  placeholder: string = '';
 
   buscar(){
     const valor = this.txtBuscar.nativeElement.value;

@@ -24,6 +24,21 @@ buscarPeliculasPopulares(): Observable <PeliculaResponse> {
     return this.http.get<PeliculaResponse>(url,{params: this.httpParams});
 }
 
+buscarPeliculasEnCarteleraHoy(): Observable <PeliculaResponse> {
+  const url = `${this.apiUrl}/movie/now_playing`
+  return this.http.get<PeliculaResponse>(url,{params: this.httpParams});
+}
+
+buscarPeliculasProximas(): Observable <PeliculaResponse> {
+  const url = `${this.apiUrl}/movie/upcoming`
+  return this.http.get<PeliculaResponse>(url,{params: this.httpParams});
+}
+
+buscarPeliculasMasValoradas(): Observable <PeliculaResponse> {
+  const url = `${this.apiUrl}/movie/top_rated`
+  return this.http.get<PeliculaResponse>(url,{params: this.httpParams});
+}
+
 buscarPeliculaPorNombre(pelicula: string): Observable <PeliculaResponse> {
   const url = `${this.apiUrl}/search/movie`
   const httpParams = new HttpParams()

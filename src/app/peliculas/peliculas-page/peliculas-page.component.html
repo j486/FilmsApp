@@ -1,11 +1,11 @@
 <div class="row">
     <div class="col">
-        <app-busqueda (onEnter)="buscarPelicula($event)"></app-busqueda>
+        <app-busqueda (onEnter)="buscarPelicula($event)" placeholder = "Buscar pelicula..."></app-busqueda>
     </div>
 </div>
 <div class="row mt-4">
     <div class="col">
-        <app-mostrar-resultados [resultados]="peliculas" [tituloPagina]="titulo"></app-mostrar-resultados>
+        <app-mostrar-resultados-peliculas [resultados]="peliculas" [tituloPagina]="titulo"></app-mostrar-resultados-peliculas>
     </div>
 </div>
 
