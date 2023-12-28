@@ -11,8 +11,9 @@ import { StarsComponent } from './shared/stars/stars.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import { SeriesPageComponent } from './series/series-page/series-page.component';
-import { MostrarResultadosPeliculasComponent } from './shared/mostrar-resultados-peliculas/mostrar-resultados-peliculas.component';
-import { MostrarResultadosSeriesComponent } from './shared/mostrar-resultados-series/mostrar-resultados-series.component';
+import { MostrarResultadosPeliculasComponent } from './peliculas/mostrar-resultados-peliculas/mostrar-resultados-peliculas.component';
+import { MostrarResultadosSeriesComponent } from './series/mostrar-resultados-series/mostrar-resultados-series.component';
+import { VerPeliculaComponent } from './peliculas/ver-pelicula/ver-pelicula.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MostrarResultadosSeriesComponent } from './shared/mostrar-resultados-se
     MostrarResultadosPeliculasComponent,
     StarsComponent,
     SeriesPageComponent,
-    MostrarResultadosSeriesComponent
+    MostrarResultadosSeriesComponent,
+    VerPeliculaComponent
   ],
   imports: [
     BrowserModule,

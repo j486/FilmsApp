@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PeliculasPageComponent } from './peliculas/peliculas-page/peliculas-page.component';
-import { BusquedaComponent } from './shared/busqueda/busqueda.component';
 import { SeriesPageComponent } from './series/series-page/series-page.component';
+import { VerPeliculaComponent } from './peliculas/ver-pelicula/ver-pelicula.component';
 
 const routes: Routes = [
   {
@@ -14,6 +14,16 @@ const routes: Routes = [
   {
     path: 'peliculas/:busqueda',
     component: PeliculasPageComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'peliculas',
+    component: PeliculasPageComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'pelicula/:id',
+    component: VerPeliculaComponent,
     pathMatch: 'full'
   },
   {

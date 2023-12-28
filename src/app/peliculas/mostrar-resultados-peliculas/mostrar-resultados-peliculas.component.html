@@ -1,0 +1,16 @@
+<h1 class="mb-3" style="font-weight: bold;">{{tituloPagina}}</h1>
+<div class="row">
+    <div class="col-md-3 col-sm-6 animate__animated animate__fadeIn d-flex mb-4" *ngFor="let contenido of resultados">
+        <div class="card" [routerLink]="['pelicula',contenido.id]">
+                <img *ngIf="contenido.poster_path != null; else imagen404" [src]="urlImagenes + contenido.poster_path" alt="No hay imagen" class="car-img-top" style="height: 450px;">
+                <ng-template #imagen404>
+                    <img src="./assets/imagen404.jpg" alt="No hay imagen" class="car-img-top" style="height: 450px;">
+                </ng-template>
+                <app-stars class="mt-1" [numeroEstrellas]="contenido.vote_average"></app-stars>
+                <div class="card-body">
+                    <h3 class="card-title" style="font-weight: bold;">{{contenido.title}}</h3>
+                    <p class="card-text">{{contenido.release_date | date: 'dd/MM/yyyy' }}</p>
+                </div>
+        </div>
+    </div>
+</div>

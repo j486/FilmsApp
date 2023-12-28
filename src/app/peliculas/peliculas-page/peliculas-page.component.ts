@@ -29,6 +29,7 @@ export class PeliculasPageComponent {
 
   cargarContenido() {
     const parametro = this.route.snapshot.params['busqueda']
+    console.log("Parametro pagina pelicula: " + parametro)
     switch (parametro) {
       case "populares":
         this.peliculasService.buscarPeliculasPopulares().subscribe((resp) => {

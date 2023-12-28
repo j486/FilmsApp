@@ -27,6 +27,7 @@ export class SeriesPageComponent {
 
   cargarContenido(){
     const parametro = this.route.snapshot.params['busqueda']
+    console.log("Parametro pagina serie: " + parametro)
     switch (parametro) {
       case "populares":
         this.seriesService.buscarSeriesPopulares().subscribe((resp) => {
