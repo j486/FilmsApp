@@ -11,7 +11,7 @@ export class PeliculasService {
   constructor(private http: HttpClient) { }
 
   api_key: string = "c4991cc22cf76a1ed2a813db5401f25e";
-  apiUrl = "https://api.themoviedb.org/3/"
+  apiUrl = "https://api.themoviedb.org/3"
 
 get httpParams() {
   return new HttpParams()
